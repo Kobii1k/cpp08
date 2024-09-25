@@ -6,30 +6,34 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 16:04:14 by mgagne            #+#    #+#             */
-/*   Updated: 2024/09/19 19:11:19 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/09/25 14:58:03 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef EASYFIND_HPP
 	#define EASYFIND_HPP
 
-	#include <iostream>
-	#include <string>
+	#include "easyfind.h"
+
+	class NotFoundException : public std::exception
+	{
+		public :
+			virtual const char*	what() const throw();
+	};
+
+	const char*	NotFoundException::what() const throw()
+	{ return ("error: Couldn't find the number in this container"); }
 
 	template<typename T>
-	int	easyfind(T array, int toFind)
+	int	easyfind(T arr, int toFind)
 	{
-		// std::iterator<T> it_end = array.end();
-		// T::std::template it_begin = array.begin();
-		// T::std::template it_end = array.end();
-		// std::iterator<int> it_begin = array.begin();
-		// std::iterator<int> it_end = array.end();
-        // while (it_begin != it_end)
-		// {
-		// 	if (toFind == array[it_begin])
-		// 		return (it_begin);
-		// }
-		return (-1);
+		typename T::const_iterator	it;
+
+		it = std::find(arr.begin(), arr.end(), toFind);
+		if (it == arr.end())
+			throw NotFoundException();
+		std::cout << toFind << " : Match found!" << std::endl;
+		return (toFind);
 	}
 
 #endif
