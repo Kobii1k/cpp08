@@ -1,50 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Span.hpp                                           :+:      :+:    :+:   */
+/*   MutantStack.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:21:22 by mgagne            #+#    #+#             */
-/*   Updated: 2024/09/26 22:42:32 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/09/26 22:41:44 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SPAN_HPP
-	#define SPAN_HPP
+#ifndef MUTANTSTACK_HPP
+	#define MUTANTSTACK_HPP
 
-	#include "Span.h"
+	#include "MutantStack.h"
 
-	class Span
+	class MutantStack
 	{
-
-		class spanFullException : public std::exception
-		{
-			public :
-				virtual const char *what() const throw();
-		};
-
-		class noSpanFoundException : public std::exception
-		{
-			public :
-				virtual const char *what() const throw();
-		};
+		// class Exception : public std::exception
+		// {
+		// 	public :
+		// 		virtual const char *what() const throw();
+		// };
 
 		private :
-			Span();
-			unsigned int nb;
-			std::vector<int> v;
 
 		public :
 			~Span();
+			Span();
 			Span(unsigned int nb);
 			Span(Span const &copy);
 			Span &operator=(Span const &copy);
-
-			void addNumber(int nb);
-			unsigned int shortestSpan();
-			unsigned int longestSpan();
-			void addNumbers(std::vector<int>::iterator start, std::vector<int>::iterator end);
 	};
 
 #endif

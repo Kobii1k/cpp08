@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 15:15:22 by mgagne            #+#    #+#             */
-/*   Updated: 2024/09/26 22:36:40 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/09/26 22:42:13 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #define MAX 20000
 
-int	main( void )
+int	main()
 {
 	Span s1 = Span(5);
 	Span s2 = Span(MAX + 500);
