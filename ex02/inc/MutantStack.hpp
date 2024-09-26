@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:21:22 by mgagne            #+#    #+#             */
-/*   Updated: 2024/09/26 22:41:44 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/09/26 22:47:02 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,16 @@
 
 	#include "MutantStack.h"
 
-	class MutantStack
+	template<typename T>
+	class MutantStack : public std::stack<T>
 	{
-		// class Exception : public std::exception
-		// {
-		// 	public :
-		// 		virtual const char *what() const throw();
-		// };
-
 		private :
 
 		public :
-			~Span();
-			Span();
-			Span(unsigned int nb);
-			Span(Span const &copy);
-			Span &operator=(Span const &copy);
+			~MutantStack<T>();
+			MutantStack<T>();
+			MutantStack<T>(MutantStack<T> const &copy);
+			MutantStack<T> &operator=(MutantStack<T> const &copy);
 	};
 
 #endif

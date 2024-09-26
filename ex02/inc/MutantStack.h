@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 16:04:14 by mgagne            #+#    #+#             */
-/*   Updated: 2024/09/26 22:40:13 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/09/26 22:45:13 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 	#include <iostream>
 	#include <algorithm>
 
-	# include <vector>
+	# include <stack>
 
 	#define CONSTRUCTOR ": Constructor called"
 	#define DESTRUCTOR ": Destructor called"
