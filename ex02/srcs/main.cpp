@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 15:15:22 by mgagne            #+#    #+#             */
-/*   Updated: 2024/09/26 22:45:08 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/09/27 00:02:10 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,56 @@ int main()
 		++it;
 	}
 	std::stack<int> s(mstack);
-	return (0);
+	return 0;
 }
+
+// #include "list"
+// int main()
+// {
+// 	std::list<int> mstack;
+
+// 	mstack.push_back(5);
+// 	mstack.push_back(17);
+// 	std::cout << mstack.back() << std::endl;
+// 	mstack.pop_back();
+// 	std::cout << mstack.size() << std::endl;
+// 	mstack.push_back(3);
+// 	mstack.push_back(5);
+// 	mstack.push_back(737);
+// 	//[...]
+// 	mstack.push_back(0);
+// 	std::list<int>::iterator it = mstack.begin();
+// 	std::list<int>::iterator ite = mstack.end();
+// 	++it;
+// 	--it;
+// 	while (it != ite)
+// 	{
+// 		std::cout << *it << std::endl;
+// 		++it;
+// 	}
+// 	std::list<int> s(mstack);
+// 	return (0);
+// }
+
+// int main()
+// {
+// 	MutantStack<char> mstack;
+
+// 	mstack.push('O');
+// 	std::cout << mstack.top() << std::endl;
+// 	mstack.push('N');
+// 	std::cout << mstack.top() << std::endl;
+// 	mstack.push('L');
+// 	std::cout << mstack.top() << std::endl;
+// 	mstack.push('I');
+// 	std::cout << mstack.top() << std::endl;
+// 	mstack.push('N');
+// 	std::cout << mstack.top() << std::endl;
+// 	mstack.push('E');
+// 	std::cout << mstack.top() << std::endl;
+
+// 	mstack.pop();
+// 	std::cout << mstack.size() << std::endl;
+
+// }
 
