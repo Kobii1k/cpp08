@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 15:21:22 by mgagne            #+#    #+#             */
-/*   Updated: 2024/09/25 15:33:56 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/09/26 22:33:38 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,36 @@
 
 	class Span
 	{
+
+		//exceptions x2 :
+		//	span Full & can't find short/long .est span
+		class spanFullException : public std::exception
+		{
+			public :
+				virtual const char *what() const throw();
+		};
+
+		class noSpanFoundException : public std::exception
+		{
+			public :
+				virtual const char *what() const throw();
+		};
+
 		private :
 			Span();
-			unsigned int n;
+			unsigned int nb;
 			std::vector<int> v;
 
 		public :
 			~Span();
-			Span(unsigned int n);
+			Span(unsigned int nb);
 			Span(Span const &copy);
 			Span &operator=(Span const &copy);
 
-			void addNumber(int n);
-			unsigned int shortestSpan(void);
-			unsigned int longestSpan(void);
+			void addNumber(int nb);
+			unsigned int shortestSpan();
+			unsigned int longestSpan();
 			void addNumbers(std::vector<int>::iterator start, std::vector<int>::iterator end);
-
-		//exceptions x2 :
-		//	span Full & can't find short/long .est span
 	};
 
 #endif

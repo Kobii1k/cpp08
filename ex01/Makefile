@@ -12,6 +12,7 @@ NAME		=	Span
 # --------------- FILES --------------- #
 
 LIST_SRC	=	main.cpp \
+				Span.cpp
 
 
 # ------------ DIRECTORIES ------------ #
