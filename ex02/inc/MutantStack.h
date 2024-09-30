@@ -6,12 +6,12 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 16:04:14 by mgagne            #+#    #+#             */
-/*   Updated: 2024/09/26 22:45:13 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/09/30 20:41:06 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SPAN_H
-	#define SPAN_H
+#ifndef MUTANTSTACK_H
+	#define MUTANTSTACK_H
 
 	#include <iostream>
 	#include <algorithm>
