@@ -6,12 +6,11 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 15:15:22 by mgagne            #+#    #+#             */
-/*   Updated: 2024/09/25 14:57:12 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/09/30 20:20:55 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "easyfind.hpp"
-#include <vector>
 
 int	main( void )
 {

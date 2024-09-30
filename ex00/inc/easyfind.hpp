@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 16:04:14 by mgagne            #+#    #+#             */
-/*   Updated: 2024/09/25 14:58:03 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/09/30 20:30:06 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 	{ return ("error: Couldn't find the number in this container"); }
 
 	template<typename T>
-	int	easyfind(T arr, int toFind)
+	void	easyfind(T arr, int toFind)
 	{
 		typename T::const_iterator	it;
 
@@ -33,7 +33,7 @@
 		if (it == arr.end())
 			throw NotFoundException();
 		std::cout << toFind << " : Match found!" << std::endl;
-		return (toFind);
+		return ;
 	}
 
 #endif
